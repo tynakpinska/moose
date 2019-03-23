@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blur: 0px;
+    --rotate: 0deg;
+    --radius: 0px;
+    --spacing: 0px;
+}
+
+body {
+    background-color: rgb(66, 250, 29);
+    color: rgb(66, 250, 29);
+    font-family: 'Margarine', cursive;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.text, .image {
+    width: 50%;
+    margin: 30px auto;
+}
+
+h1, ul {
+    background-color: rgb(200, 10, 100);
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 20px auto;
+}
+
+input {
+    margin: 10px;
+}
+
+input[type=range] {
+    background: transparent;
+}
+
+input[type=range]::-moz-range-thumb {
+    border-radius: 50%;
+    background: rgb(66, 250, 29);
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    border-radius: 50%;
+    background: rgb(66, 250, 29);
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+    height: 4px;
+    border-radius: 10%;
+    background: rgb(66, 250, 29);
+}
+
+img {
+    width: 50%;
+    border: 10px solid rgb(200, 10, 100);
+    filter: blur(var(--blur));
+    transform: rotate(var(--rotate));
+    border-radius: var(--radius);
+    margin: var(--spacing);
+    display: block;
+    position: relative;
+    top: 10%;
+    left: 20%;
+}
